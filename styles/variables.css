@@ -9,7 +9,7 @@
   --text-color: #f1b2ce;
   --subtitle-color: #000028;
   --title-color: #db00ff;
-  --background-color: #000028;
   --subtitle-one-color: #ff0070;
   --background-image: url(../images/cover-image-dark.png);
+  --font-family: IBM Plex Mono, monospace;
 }

@@ -1,10 +1,14 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  font-family: IBM Plex Mono, "Arial", sans-serif;
-  background-color: var(--background-color);
+  font-family: var(--font-family);
   margin-left: auto;
   margin-right: auto;
+  background-image: var(--background-image);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
@@ -16,16 +20,13 @@
   grid-template-rows: auto;
   align-items: baseline;
   padding: 10px;
-  background-image: var(--background-image);
-  background-size: cover;
-  background-position: center;
   min-block-size: 100vh;
 }
 
 .header__image {
   justify-self: end;
   position: absolute;
-  padding: 10px;
+  padding: 10px 10px;
 }
 
 .camera {
@@ -79,7 +80,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 18px; /* 100% */
-  margin-block-start: 66px;
+  margin-block-start: 63px;
 }
 
 .header__theme-menu-list {
@@ -116,16 +117,20 @@
   font-style: normal;
   font-weight: 700;
   line-height: 82.5%;
+  margin-block-start: 15px;
 }
 
 .header__text {
   display: grid;
-  background-color: var(--accent-color);
   color: #000028;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 23.4px; /* 130% */
+}
+
+.title-decor {
+  background-color: var(--accent-color);
 }
 
 /*     ............     MAIN     ...........     */
@@ -149,7 +154,6 @@
 }
 
 .subtitle {
-  background-color: var(--accent-color);
   color: var(--subtitle-color);
   font-size: 18px;
   font-style: normal;
@@ -203,7 +207,6 @@
 }
 
 .how_subtitle {
-  background-color: var(--accent-color);
   color: var(--subtitle-color);
   font-size: 18px;
   font-style: normal;
@@ -217,7 +220,6 @@
 }
 
 .can__subtitle {
-  background-color: var(--accent-color);
   color: var(--subtitle-color);
   font-size: 18px;
   font-style: normal;
@@ -260,7 +262,7 @@
 
 @media screen and (min-width: 607px) {
   .header {
-    padding: 20px;
+    padding: 0;
   }
   .decorated-zone::before {
     top: 20px;
@@ -274,16 +276,18 @@
     padding: 20px;
   }
   .header__theme-menu {
-    margin-block-start: 170px;
+    margin-block-start: 190px;
+    margin-inline-end: 20px;
   }
   .header__name {
-    margin-left: -20px;
     margin-block-start: 10px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
   .header__text {
-    width: 50%;
+    width: 47%;
     justify-self: end;
+    margin-block-end: 20px;
+    margin-inline-end: 20px;
   }
   .content {
     padding: 60px 20px;
@@ -294,18 +298,26 @@
     gap: 20px;
   }
   .why_content_column {
-    margin-top: -20px;
     width: calc(66.66% - 10px);
+    gap: 20px;
+    display: grid;
+  }
+  .what__columns {
+    margin-block-start: 20px;
+    display: grid;
+    gap: 20px;
   }
   .title {
     width: calc((100% / 3) - 6px);
+  }
+  .subtitle {
+    margin-block-start: 0;
   }
   .how {
     display: flex;
     gap: 20px;
   }
   .how__content {
-    margin-top: -20px;
     width: calc(66.66% - 10px);
   }
   .can:last-of-type .image {
@@ -340,7 +352,11 @@
 @media screen and (min-width: 1000px) {
   .header__theme-menu {
     justify-self: center;
-    margin: 0;
+    margin-block-start: 18px;
+    margin-inline-end: 0;
+  }
+  .header__text {
+    width: 48%;
   }
   .header__theme-menu-list {
     display: flex;
