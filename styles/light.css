@@ -15,7 +15,7 @@
   --title-color: #ffc2e6;
   --subtitle-one-color: #353430;
   --background-image: url(../images/cover-image-light.png);
-  --font-family: IBM Plex Mono, monospace;
+  --font-family: IBM Plex Mono;
 
   @media screen and (min-width: 1000px) {
     .footer__title {
@@ -39,7 +39,7 @@
       --title-color: #ffc2e6;
       --subtitle-one-color: #353430;
       --background-image: url(../images/cover-image-light.png);
-      --font-family: IBM Plex Mono, monospace;
+      --font-family: IBM Plex Mono;
     }
   }
 }

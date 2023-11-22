@@ -1,7 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  font-family: var(--font-family);
+  font-family: var(--font-family), monospace;
   margin-left: auto;
   margin-right: auto;
   background-image: var(--background-image);
@@ -24,9 +24,10 @@
 }
 
 .header__image {
-  justify-self: end;
   position: absolute;
-  padding: 10px 10px;
+  padding: 10px;
+  top: 0;
+  right: 0;
 }
 
 .camera {
@@ -284,7 +285,7 @@
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
   .header__text {
-    width: 47%;
+    width: calc(50% - 20px);
     justify-self: end;
     margin-block-end: 20px;
     margin-inline-end: 20px;
@@ -355,9 +356,7 @@
     margin-block-start: 18px;
     margin-inline-end: 0;
   }
-  .header__text {
-    width: 48%;
-  }
+
   .header__theme-menu-list {
     display: flex;
   }
